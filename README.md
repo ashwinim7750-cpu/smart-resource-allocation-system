@@ -31,6 +31,6 @@ Future Improvements
 - Store data using files or database  
 - Enhance allocation logic  
 
-Author
-Ashwini M  
-Computer Science Student
+Author:
+  Ashwini M  
+  Computer Science Student
