@@ -2,7 +2,6 @@ package Smart.Allocation;
 
 import java.util.*;
 
-// Person Class
 class Person {
     private String name;
     private int age;
@@ -19,7 +18,6 @@ public static void main(String[] args) {
         app.menu();
     }}
 
-// Student Class
 class Student extends Person {
     private String studentID;
     private int priority;
@@ -34,7 +32,6 @@ class Student extends Person {
     public int getPriority() { return priority; }
 }
 
-// Room Class
 class Room {
     private String roomNumber;
     private boolean isAllocated;
@@ -49,7 +46,6 @@ class Room {
     public void setAllocated(boolean allocated) { this.isAllocated = allocated; }
 }
 
-// Main Class
 public class AllocationApplication {
 
     private ArrayList<Student> students = new ArrayList<>();
@@ -58,7 +54,6 @@ public class AllocationApplication {
 
     Scanner sc = new Scanner(System.in);
 
-    // Add Student
     public void addStudent() {
         System.out.print("Enter Name: ");
         String name = sc.next();
@@ -75,8 +70,6 @@ public class AllocationApplication {
         students.add(new Student(name, age, id, priority));
         System.out.println("✅ Student Added!");
     }
-
-    // Add Room
     public void addRoom() {
         System.out.print("Enter Room Number: ");
         String roomNo = sc.next();
@@ -85,7 +78,6 @@ public class AllocationApplication {
         System.out.println("✅ Room Added!");
     }
 
-    // Allocate Rooms
     public void allocateRooms() {
         students.sort((a, b) -> b.getPriority() - a.getPriority());
 
@@ -103,7 +95,6 @@ public class AllocationApplication {
         System.out.println("✅ Allocation Done!");
     }
 
-    // View Allocation
     public void viewAllocations() {
         if (allocationMap.isEmpty()) {
             System.out.println("No allocations yet.");
@@ -116,7 +107,6 @@ public class AllocationApplication {
         }
     }
 
-    // Search Allocation
     public void searchAllocation() {
         System.out.print("Enter Student ID to search: ");
         String id = sc.next();
@@ -129,7 +119,6 @@ public class AllocationApplication {
         }
     }
 
-    // Delete Allocation
     public void deleteAllocation() {
         System.out.print("Enter Student ID to delete: ");
         String id = sc.next();
@@ -143,7 +132,6 @@ public class AllocationApplication {
         }
     }
 
-    // MENU
     public void menu() {
         int choice;
 
